@@ -1,0 +1,4 @@
+.idea/
+*.crx
+*.pem
+.DS_Store

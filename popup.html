@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Query Builder</title>
+  <link rel="stylesheet" href="./popup.css" />
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🔗 URL Query Builder</h1>
+    <p class="subtitle">清晰、简单的构建URL的Query参数</p>
+  </header>
+
+  <div class="input-group">
+    <div class="input-container">
+      <label for="url-input"></label>
+      <input type="text" id="url-input" placeholder="🌐 输入URL">
+      <button id="parse-btn" class="parse-btn">解析</button>
+    </div>
+  </div>
+
+  <div class="url-details" id="url-details" style="display: none;">
+    <div class="url-details-grid">
+      <div class="detail-label">📋 协议</div>
+      <div class="detail-value" id="protocol"></div>
+
+      <div class="detail-label">🏠 域名</div>
+      <div class="detail-value" id="hostname"></div>
+
+      <div class="detail-label">📍 路径</div>
+      <div class="detail-value" id="pathname"></div>
+    </div>
+  </div>
+
+  <div class="query-section" id="query-section" style="display: none;">
+    <div class="query-header">
+      <h2>🔍 查询参数</h2>
+    </div>
+
+    <table class="query-table" id="params-table">
+      <thead>
+      <tr>
+        <th width="40%">参数名</th>
+        <th width="50%">参数值</th>
+        <th width="10%">操作</th>
+      </tr>
+      </thead>
+      <tbody id="params-list">
+      <!-- 动态填充 -->
+      </tbody>
+    </table>
+
+    <div class="add-param-form">
+      <!-- 这里格外注意 —— webstorm 会提示让加一个 label标签，但是加了之后就会讲dom元素积压导致样式变形 -->
+      <input type="text" id="new-key" placeholder="新参数名">
+      <input type="text" id="new-value" placeholder="新参数值">
+      <button id="add-param-btn">➕ 添加参数</button>
+    </div>
+  </div>
+
+  <div class="result-section" id="result-section" style="display: none;">
+    <h2>✨ 构建的URL</h2>
+    <div class="result-container">
+      <label for="result-url"></label>
+      <input type="text" id="result-url" readonly>
+      <button id="copy-btn" class="copy-btn">📋 复制URL</button>
+    </div>
+  </div>
+
+  <div class="empty-state" id="empty-state">
+    <p>🔍 请输入URL并点击"解析"按钮开始</p>
+  </div>
+</div>
+
+<div class="notification" id="notification">URL已复制到剪贴板！</div>
+
+<script src="./popup.js"></script>
+</body>
+</html>

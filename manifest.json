@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "URL-Query-Builder",
+  "version": "1.0",
+  "description": "解析、编辑和构建带查询参数的URL",
+  "author": "Leo",
+  "permissions": ["clipboardWrite"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "images/icon_16.png",
+    "32": "images/icon_32.png",
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png"
+  }
+}
