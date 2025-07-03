@@ -11,7 +11,7 @@
 
 ## 🛠️ 安装使用
 1. **在线安装**  
-   [Chrome商店安装链接]()
+   [Chrome商店安装链接](https://chromewebstore.google.com/detail/url-query-builder/hffnopgnfjallmdgbakbljibicabppic?hl=zh-CN&utm_source=ext_sidebar)
 
 2. **手动安装**（开发者模式）
    ```bash
